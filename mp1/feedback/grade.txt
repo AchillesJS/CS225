@@ -1,0 +1,10 @@
+mp1 feedback for soslan.21
+Makefile was not commited: -1pt
+make: *** No rule to make target 'cs225/HSLAPixel.h', needed by 'main.o'.  Stop.
+Errors when rotating in_01.png: -2pts
+Errors when rotating in_02.png: -2pts
+Errors when rotating in_03.png: -2pts
+make: *** No rule to make target 'cs225/HSLAPixel.h', needed by 'unit_tests.o'.  Stop.
+Test with catch fails: -3pts
+
+Total: 0
