@@ -1,0 +1,10 @@
+ feedback for soslan.21
+g++ -std=c++1y  -c -g -O0 -Wall -Wextra -pedantic cs225/PNG.cpp
+g++ -std=c++1y  -c -g -O0 -Wall -Wextra -pedantic cs225/HSLAPixel.cpp
+g++ -std=c++1y  -c -g -O0 -Wall -Wextra -pedantic cs225/lodepng/lodepng.cpp
+make: *** No rule to make target 'Image.cpp', needed by 'Image.o'.  Stop.
+Compile Error! 
+
+myImage.png is not found.
+
+Total: 0

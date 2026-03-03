@@ -1,0 +1,2 @@
+Build failed or images differ
+Images differ

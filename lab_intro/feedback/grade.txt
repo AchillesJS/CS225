@@ -1,0 +1,12 @@
+lab_intro feedback for soslan.21
+g++ -std=c++1y -c -g -O0 -Wall -Wextra -pedantic tests/basic.cpp
+In file included from tests/../lab_intro.h:4,
+                 from tests/basic.cpp:4:
+tests/../cs225/PNG.h:12:10: fatal error: HSLAPixel.h: No such file or directory
+   12 | #include "HSLAPixel.h"
+      |          ^~~~~~~~~~~~~
+compilation terminated.
+make: *** [Makefile:34: basic.o] Error 1
+./auto_grade_lab_intro_new.sh: line 41: ./test: No such file or directory
+
+Total: 3

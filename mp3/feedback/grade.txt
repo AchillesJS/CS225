@@ -1,0 +1,216 @@
+mp3 feedback for soslan.21
+g++ -std=c++11 -g -O0 -pedantic  -c  cs225/HSLAPixel.cpp -o cs225/HSLAPixel.o
+g++ -std=c++11 -g -O0 -pedantic  -c  -fsanitize=address -fno-omit-frame-pointer cs225/HSLAPixel.cpp -o cs225/HSLAPixel.o-asan.o
+g++ -std=c++11 -g -O0 -pedantic  -c  cs225/PNG.cpp -o cs225/PNG.o
+g++ -std=c++11 -g -O0 -pedantic  -c  -fsanitize=address -fno-omit-frame-pointer cs225/PNG.cpp -o cs225/PNG.o-asan.o
+g++ -std=c++11 -g -O0 -pedantic  -c  cs225/lodepng/lodepng.cpp -o cs225/lodepng/lodepng.o
+g++ -std=c++11 -g -O0 -pedantic  -c  -fsanitize=address -fno-omit-frame-pointer cs225/lodepng/lodepng.cpp -o cs225/lodepng/lodepng.o-asan.o
+g++ -std=c++11 -g -O0 -pedantic  -c    -c -o tests/testmain.o tests/testmain.cpp
+g++ -std=c++11 -g -O0 -pedantic  -c    -c -o tests/tests_part1.o tests/tests_part1.cpp
+In file included from tests/../list.h:293,
+                 from tests/tests_helper.h:6,
+                 from tests/tests_part1.cpp:2:
+tests/../list-inl.h: In instantiation of ‘void List<T>::insertFront(const T&) [with T = cs225::HSLAPixel]’:
+tests/tests_helper.h:98:33:   required from here
+tests/../list-inl.h:35:13: error: no matching function for call to ‘List<cs225::HSLAPixel>::ListNode::ListNode(const cs225::HSLAPixel*)’
+   35 |     head_ = new ListNode(&ndata);
+      |             ^~~~~~~~~~~~~~~~~~~~
+In file included from tests/../list.h:297,
+                 from tests/tests_helper.h:6,
+                 from tests/tests_part1.cpp:2:
+tests/../list-given-inl.h:89:1: note: candidate: ‘List<T>::ListNode::ListNode(const T&) [with T = cs225::HSLAPixel]’
+   89 | List<T>::ListNode::ListNode(const T& ndata) : next(NULL), prev(NULL), data(ndata)
+      | ^~~~~~~
+tests/../list-given-inl.h:89:38: note:   no known conversion for argument 1 from ‘const cs225::HSLAPixel*’ to ‘const cs225::HSLAPixel&’
+   89 | List<T>::ListNode::ListNode(const T& ndata) : next(NULL), prev(NULL), data(ndata)
+      |                             ~~~~~~~~~^~~~~
+tests/../list-given-inl.h:85:1: note: candidate: ‘List<T>::ListNode::ListNode() [with T = cs225::HSLAPixel]’
+   85 | List<T>::ListNode::ListNode() : next(NULL), prev(NULL), data(T())
+      | ^~~~~~~
+tests/../list-given-inl.h:85:1: note:   candidate expects 0 arguments, 1 provided
+In file included from tests/tests_helper.h:6,
+                 from tests/tests_part1.cpp:2:
+tests/../list.h:30:11: note: candidate: ‘constexpr List<cs225::HSLAPixel>::ListNode::ListNode(const List<cs225::HSLAPixel>::ListNode&)’
+   30 |     class ListNode {
+      |           ^~~~~~~~
+tests/../list.h:30:11: note:   no known conversion for argument 1 from ‘const cs225::HSLAPixel*’ to ‘const List<cs225::HSLAPixel>::ListNode&’
+tests/../list.h:30:11: note: candidate: ‘constexpr List<cs225::HSLAPixel>::ListNode::ListNode(List<cs225::HSLAPixel>::ListNode&&)’
+tests/../list.h:30:11: note:   no known conversion for argument 1 from ‘const cs225::HSLAPixel*’ to ‘List<cs225::HSLAPixel>::ListNode&&’
+In file included from tests/../list.h:293,
+                 from tests/tests_helper.h:6,
+                 from tests/tests_part1.cpp:2:
+tests/../list-inl.h:37:22: error: no matching function for call to ‘List<cs225::HSLAPixel>::ListNode::ListNode(const cs225::HSLAPixel*)’
+   37 |     ListNode* node = new ListNode(&ndata);
+      |                      ^~~~~~~~~~~~~~~~~~~~
+In file included from tests/../list.h:297,
+                 from tests/tests_helper.h:6,
+                 from tests/tests_part1.cpp:2:
+tests/../list-given-inl.h:89:1: note: candidate: ‘List<T>::ListNode::ListNode(const T&) [with T = cs225::HSLAPixel]’
+   89 | List<T>::ListNode::ListNode(const T& ndata) : next(NULL), prev(NULL), data(ndata)
+      | ^~~~~~~
+tests/../list-given-inl.h:89:38: note:   no known conversion for argument 1 from ‘const cs225::HSLAPixel*’ to ‘const cs225::HSLAPixel&’
+   89 | List<T>::ListNode::ListNode(const T& ndata) : next(NULL), prev(NULL), data(ndata)
+      |                             ~~~~~~~~~^~~~~
+tests/../list-given-inl.h:85:1: note: candidate: ‘List<T>::ListNode::ListNode() [with T = cs225::HSLAPixel]’
+   85 | List<T>::ListNode::ListNode() : next(NULL), prev(NULL), data(T())
+      | ^~~~~~~
+tests/../list-given-inl.h:85:1: note:   candidate expects 0 arguments, 1 provided
+In file included from tests/tests_helper.h:6,
+                 from tests/tests_part1.cpp:2:
+tests/../list.h:30:11: note: candidate: ‘constexpr List<cs225::HSLAPixel>::ListNode::ListNode(const List<cs225::HSLAPixel>::ListNode&)’
+   30 |     class ListNode {
+      |           ^~~~~~~~
+tests/../list.h:30:11: note:   no known conversion for argument 1 from ‘const cs225::HSLAPixel*’ to ‘const List<cs225::HSLAPixel>::ListNode&’
+tests/../list.h:30:11: note: candidate: ‘constexpr List<cs225::HSLAPixel>::ListNode::ListNode(List<cs225::HSLAPixel>::ListNode&&)’
+tests/../list.h:30:11: note:   no known conversion for argument 1 from ‘const cs225::HSLAPixel*’ to ‘List<cs225::HSLAPixel>::ListNode&&’
+In file included from tests/../list.h:293,
+                 from tests/tests_helper.h:6,
+                 from tests/tests_part1.cpp:2:
+tests/../list-inl.h: In instantiation of ‘void List<T>::insertBack(const T&) [with T = cs225::HSLAPixel]’:
+tests/tests_helper.h:100:32:   required from here
+tests/../list-inl.h:53:13: error: no matching function for call to ‘List<cs225::HSLAPixel>::ListNode::ListNode(const cs225::HSLAPixel*)’
+   53 |     tail_ = new ListNode(&ndata);
+      |             ^~~~~~~~~~~~~~~~~~~~
+In file included from tests/../list.h:297,
+                 from tests/tests_helper.h:6,
+                 from tests/tests_part1.cpp:2:
+tests/../list-given-inl.h:89:1: note: candidate: ‘List<T>::ListNode::ListNode(const T&) [with T = cs225::HSLAPixel]’
+   89 | List<T>::ListNode::ListNode(const T& ndata) : next(NULL), prev(NULL), data(ndata)
+      | ^~~~~~~
+tests/../list-given-inl.h:89:38: note:   no known conversion for argument 1 from ‘const cs225::HSLAPixel*’ to ‘const cs225::HSLAPixel&’
+   89 | List<T>::ListNode::ListNode(const T& ndata) : next(NULL), prev(NULL), data(ndata)
+      |                             ~~~~~~~~~^~~~~
+tests/../list-given-inl.h:85:1: note: candidate: ‘List<T>::ListNode::ListNode() [with T = cs225::HSLAPixel]’
+   85 | List<T>::ListNode::ListNode() : next(NULL), prev(NULL), data(T())
+      | ^~~~~~~
+tests/../list-given-inl.h:85:1: note:   candidate expects 0 arguments, 1 provided
+In file included from tests/tests_helper.h:6,
+                 from tests/tests_part1.cpp:2:
+tests/../list.h:30:11: note: candidate: ‘constexpr List<cs225::HSLAPixel>::ListNode::ListNode(const List<cs225::HSLAPixel>::ListNode&)’
+   30 |     class ListNode {
+      |           ^~~~~~~~
+tests/../list.h:30:11: note:   no known conversion for argument 1 from ‘const cs225::HSLAPixel*’ to ‘const List<cs225::HSLAPixel>::ListNode&’
+tests/../list.h:30:11: note: candidate: ‘constexpr List<cs225::HSLAPixel>::ListNode::ListNode(List<cs225::HSLAPixel>::ListNode&&)’
+tests/../list.h:30:11: note:   no known conversion for argument 1 from ‘const cs225::HSLAPixel*’ to ‘List<cs225::HSLAPixel>::ListNode&&’
+In file included from tests/../list.h:293,
+                 from tests/tests_helper.h:6,
+                 from tests/tests_part1.cpp:2:
+tests/../list-inl.h:56:22: error: no matching function for call to ‘List<cs225::HSLAPixel>::ListNode::ListNode(const cs225::HSLAPixel*)’
+   56 |     ListNode* node = new ListNode(&ndata);
+      |                      ^~~~~~~~~~~~~~~~~~~~
+In file included from tests/../list.h:297,
+                 from tests/tests_helper.h:6,
+                 from tests/tests_part1.cpp:2:
+tests/../list-given-inl.h:89:1: note: candidate: ‘List<T>::ListNode::ListNode(const T&) [with T = cs225::HSLAPixel]’
+   89 | List<T>::ListNode::ListNode(const T& ndata) : next(NULL), prev(NULL), data(ndata)
+      | ^~~~~~~
+tests/../list-given-inl.h:89:38: note:   no known conversion for argument 1 from ‘const cs225::HSLAPixel*’ to ‘const cs225::HSLAPixel&’
+   89 | List<T>::ListNode::ListNode(const T& ndata) : next(NULL), prev(NULL), data(ndata)
+      |                             ~~~~~~~~~^~~~~
+tests/../list-given-inl.h:85:1: note: candidate: ‘List<T>::ListNode::ListNode() [with T = cs225::HSLAPixel]’
+   85 | List<T>::ListNode::ListNode() : next(NULL), prev(NULL), data(T())
+      | ^~~~~~~
+tests/../list-given-inl.h:85:1: note:   candidate expects 0 arguments, 1 provided
+In file included from tests/tests_helper.h:6,
+                 from tests/tests_part1.cpp:2:
+tests/../list.h:30:11: note: candidate: ‘constexpr List<cs225::HSLAPixel>::ListNode::ListNode(const List<cs225::HSLAPixel>::ListNode&)’
+   30 |     class ListNode {
+      |           ^~~~~~~~
+tests/../list.h:30:11: note:   no known conversion for argument 1 from ‘const cs225::HSLAPixel*’ to ‘const List<cs225::HSLAPixel>::ListNode&’
+tests/../list.h:30:11: note: candidate: ‘constexpr List<cs225::HSLAPixel>::ListNode::ListNode(List<cs225::HSLAPixel>::ListNode&&)’
+tests/../list.h:30:11: note:   no known conversion for argument 1 from ‘const cs225::HSLAPixel*’ to ‘List<cs225::HSLAPixel>::ListNode&&’
+In file included from tests/../list.h:293,
+                 from tests/tests_helper.h:6,
+                 from tests/tests_part1.cpp:2:
+tests/../list-inl.h: In instantiation of ‘void List<T>::insertFront(const T&) [with T = int]’:
+tests/tests_part1.cpp:19:55:   required from here
+tests/../list-inl.h:35:13: error: invalid conversion from ‘const int*’ to ‘int’ [-fpermissive]
+   35 |     head_ = new ListNode(&ndata);
+      |             ^~~~~~~~~~~~~~~~~~~~
+      |             |
+      |             const int*
+In file included from tests/../list.h:297,
+                 from tests/tests_helper.h:6,
+                 from tests/tests_part1.cpp:2:
+tests/../list-given-inl.h:89:38: note:   initializing argument 1 of ‘List<T>::ListNode::ListNode(const T&) [with T = int]’
+   89 | List<T>::ListNode::ListNode(const T& ndata) : next(NULL), prev(NULL), data(ndata)
+      |                             ~~~~~~~~~^~~~~
+In file included from tests/../list.h:293,
+                 from tests/tests_helper.h:6,
+                 from tests/tests_part1.cpp:2:
+tests/../list-inl.h:37:22: error: invalid conversion from ‘const int*’ to ‘int’ [-fpermissive]
+   37 |     ListNode* node = new ListNode(&ndata);
+      |                      ^~~~~~~~~~~~~~~~~~~~
+      |                      |
+      |                      const int*
+In file included from tests/../list.h:297,
+                 from tests/tests_helper.h:6,
+                 from tests/tests_part1.cpp:2:
+tests/../list-given-inl.h:89:38: note:   initializing argument 1 of ‘List<T>::ListNode::ListNode(const T&) [with T = int]’
+   89 | List<T>::ListNode::ListNode(const T& ndata) : next(NULL), prev(NULL), data(ndata)
+      |                             ~~~~~~~~~^~~~~
+In file included from tests/../list.h:293,
+                 from tests/tests_helper.h:6,
+                 from tests/tests_part1.cpp:2:
+tests/../list-inl.h: In instantiation of ‘void List<T>::insertBack(const T&) [with T = int]’:
+tests/tests_part1.cpp:31:54:   required from here
+tests/../list-inl.h:53:13: error: invalid conversion from ‘const int*’ to ‘int’ [-fpermissive]
+   53 |     tail_ = new ListNode(&ndata);
+      |             ^~~~~~~~~~~~~~~~~~~~
+      |             |
+      |             const int*
+In file included from tests/../list.h:297,
+                 from tests/tests_helper.h:6,
+                 from tests/tests_part1.cpp:2:
+tests/../list-given-inl.h:89:38: note:   initializing argument 1 of ‘List<T>::ListNode::ListNode(const T&) [with T = int]’
+   89 | List<T>::ListNode::ListNode(const T& ndata) : next(NULL), prev(NULL), data(ndata)
+      |                             ~~~~~~~~~^~~~~
+In file included from tests/../list.h:293,
+                 from tests/tests_helper.h:6,
+                 from tests/tests_part1.cpp:2:
+tests/../list-inl.h:56:22: error: invalid conversion from ‘const int*’ to ‘int’ [-fpermissive]
+   56 |     ListNode* node = new ListNode(&ndata);
+      |                      ^~~~~~~~~~~~~~~~~~~~
+      |                      |
+      |                      const int*
+In file included from tests/../list.h:297,
+                 from tests/tests_helper.h:6,
+                 from tests/tests_part1.cpp:2:
+tests/../list-given-inl.h:89:38: note:   initializing argument 1 of ‘List<T>::ListNode::ListNode(const T&) [with T = int]’
+   89 | List<T>::ListNode::ListNode(const T& ndata) : next(NULL), prev(NULL), data(ndata)
+      |                             ~~~~~~~~~^~~~~
+In file included from tests/../list.h:293,
+                 from tests/tests_helper.h:6,
+                 from tests/tests_part1.cpp:2:
+tests/../list-inl.h: In instantiation of ‘void List<T>::reverseNth(int) [with T = cs225::HSLAPixel]’:
+tests/tests_part1.cpp:72:18:   required from here
+tests/../list-inl.h:111:16: error: no matching function for call to ‘List<cs225::HSLAPixel>::reverse(List<cs225::HSLAPixel>::ListNode**, List<cs225::HSLAPixel>::ListNode**)’
+  111 |         reverse(&prevNode, &cursor);
+      |         ~~~~~~~^~~~~~~~~~~~~~~~~~~~
+tests/../list-inl.h:65:6: note: candidate: ‘void List<T>::reverse() [with T = cs225::HSLAPixel]’
+   65 | void List<T>::reverse() {
+      |      ^~~~~~~
+tests/../list-inl.h:65:6: note:   candidate expects 0 arguments, 2 provided
+tests/../list-inl.h:81:6: note: candidate: ‘void List<T>::reverse(List<T>::ListNode*&, List<T>::ListNode*&) [with T = cs225::HSLAPixel]’
+   81 | void List<T>::reverse(ListNode *& startPoint, ListNode *& endPoint) {
+      |      ^~~~~~~
+tests/../list-inl.h:81:35: note:   no known conversion for argument 1 from ‘List<cs225::HSLAPixel>::ListNode**’ to ‘List<cs225::HSLAPixel>::ListNode*&’
+   81 | void List<T>::reverse(ListNode *& startPoint, ListNode *& endPoint) {
+      |                       ~~~~~~~~~~~~^~~~~~~~~~
+tests/../list-inl.h:118:12: error: no matching function for call to ‘List<cs225::HSLAPixel>::reverse(List<cs225::HSLAPixel>::ListNode**, List<cs225::HSLAPixel>::ListNode**)’
+  118 |     reverse(&prevNode, &cursor);
+      |     ~~~~~~~^~~~~~~~~~~~~~~~~~~~
+tests/../list-inl.h:65:6: note: candidate: ‘void List<T>::reverse() [with T = cs225::HSLAPixel]’
+   65 | void List<T>::reverse() {
+      |      ^~~~~~~
+tests/../list-inl.h:65:6: note:   candidate expects 0 arguments, 2 provided
+tests/../list-inl.h:81:6: note: candidate: ‘void List<T>::reverse(List<T>::ListNode*&, List<T>::ListNode*&) [with T = cs225::HSLAPixel]’
+   81 | void List<T>::reverse(ListNode *& startPoint, ListNode *& endPoint) {
+      |      ^~~~~~~
+tests/../list-inl.h:81:35: note:   no known conversion for argument 1 from ‘List<cs225::HSLAPixel>::ListNode**’ to ‘List<cs225::HSLAPixel>::ListNode*&’
+   81 | void List<T>::reverse(ListNode *& startPoint, ListNode *& endPoint) {
+      |                       ~~~~~~~~~~~~^~~~~~~~~~
+make: *** [<builtin>: tests/tests_part1.o] Error 1
+Code does not compile.
+
+Total: 0
